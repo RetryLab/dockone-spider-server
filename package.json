@@ -1,0 +1,16 @@
+{
+  "name": "dockerone-crawler-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "leveldown": "^1.4.3",
+    "levelup": "^1.3.1",
+    "mongodb": "^2.1.3"
+  }
+}
