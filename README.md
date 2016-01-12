@@ -124,7 +124,9 @@ POST 	/mission/:id 				// 每完成一个任务，通知服务器.
 
 ```
 
-manager store
+## MANAGER API
+
+content store
 
 ```
 GET 	/content/:id 				// 根据urlID获取content
