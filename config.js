@@ -1,6 +1,6 @@
+var config= require('./config.json');
 var log4js = require('log4js');
 var _ = require('underscore');
-var config= require('./config.json');
 
 
 module.exports= _.extend(config, {
