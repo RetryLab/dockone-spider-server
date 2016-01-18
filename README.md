@@ -1,6 +1,6 @@
 # dockerone-crawler-server
 
-## process.env
+# process.env
 
 ```
     hostname=127.0.0.1:3000 #visit url
@@ -171,4 +171,10 @@ GET 	/content/:id 				// 根据urlID获取content
 			--params
 				id: md5(url)
 
+```
+
+
+# run
+```
+	node index.js
 ```
