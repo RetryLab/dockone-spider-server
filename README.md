@@ -1,5 +1,15 @@
 # dockerone-crawler-server
 
+## process.env
+
+```
+    hostname=127.0.0.1:3000 #visit url
+    mongodb=mongodb://127.0.0.1:27017" #mongodb (save user info, machine info, profile info)
+    redis=127.0.0.1:6379 #redis db (cache url md5 id)
+    elasticsearch=127.0.0.1:9200 #elasticsearch db (carwler content)
+
+```
+
 ## UI API
 
 account 用户信息
