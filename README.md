@@ -42,6 +42,19 @@ machine 用户机器配置
 
 ```
 
+//获取当前用户所有的机器信息
+GET 	/user/machines 				
+			--response[]
+				_id: 机器id
+				account_id: 用户ID
+				name: 名字
+				description: 描述
+
+//获取当前用户所有的机器数量
+GET 	/user/machines/count				
+			--response
+				count: 数量
+
 // 创建一个机器信息
 POST 	/user/machine 				
 			--body
@@ -54,14 +67,6 @@ POST 	/user/machine
 				disk_size: 硬盘大小 g/单位
 				transport_size: 发送字节大小(下行) byte/单位
 				receive_size: 接收字节大小(上行) byte/单位
-
-//获取当前用户所有的机器信息
-GET 	/user/machines 				
-			--response[]
-				_id: 机器id
-				account_id: 用户ID
-				name: 名字
-				description: 描述
 
 // 获取一个机器信息
 GET 	/user/machine/:id 			
@@ -91,19 +96,6 @@ profile docker配置
 
 ```
 
-// 创建一个配置信息
-POST 	/user/profile 				
-			--body
-				machine_id: 机器ID
-				name: 名字
-				description: 描述
-				cpu_use: 使用处理器占比 0~1
-				cpu_num_use: 使用处理器核数 1,2,3..
-				mem_use: 使用内存占比 0~1
-				disk_use: 使用硬盘占比 0~1
-				transport_use: 上行带宽占比 0~1
-				receive_use: 下行带宽占比 0~1
-
 //获取当前用户某个机器上的所有配置信息
 GET 	/user/profiles/:machine_id 	
 			--params
@@ -116,6 +108,26 @@ GET 	/user/profiles/:machine_id
 				description: 描述
 				script: 启动docker的脚本
 
+
+//获取当前用户某个机器上的所有配置数量
+GET 	/user/profiles/count/:machine_id 	
+			--params
+				machine_id: 机器ID
+			--response
+				count: 数量
+
+// 创建一个配置信息
+POST 	/user/profile 				
+			--body
+				machine_id: 机器ID
+				name: 名字
+				description: 描述
+				cpu_use: 使用处理器占比 0~1
+				cpu_num_use: 使用处理器核数 1,2,3..
+				mem_use: 使用内存占比 0~1
+				disk_use: 使用硬盘占比 0~1
+				transport_use: 上行带宽占比 0~1
+				receive_use: 下行带宽占比 0~1
 
 // 获取一个配置信息
 GET 	/user/profile/:id 			
