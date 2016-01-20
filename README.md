@@ -163,6 +163,20 @@ GET 	/user/analysis/:machineId?/:profilesId?
 			--params
 				machineId: 机器信息id
 				profilesId: 配置信息id
+			--response[]
+				date: 日期
+				content: 成功数
+				error: 失败数
+				link: 上传的url数量
+
+//查看在激活状态的docker client
+GET 	/user/clients/:machineId?/:profilesId?
+			--params
+				machineId: 机器信息id
+				profilesId: 配置信息id
+			--response[]
+				ip: client ip
+				date: 最近活跃时间
 
 ```
 
